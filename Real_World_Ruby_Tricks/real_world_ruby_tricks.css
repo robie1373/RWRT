@@ -1,0 +1,10 @@
+
+.content {
+    color: black;
+    font-family: helvetica, arial;
+    backgroud-color: #229;
+}
+h1, h2 {
+    color: rgb(79, 180, 226);
+    font-family: Georgia;
+}
