@@ -1,4 +1,4 @@
-#export SHOWOFF_EVAL_RUBY=1
+export SHOWOFF_EVAL_RUBY=1
 
 <!SLIDE bullets incremental transition=fade>
 # Real world Ruby tricks.
