@@ -1,3 +1,21 @@
+This is a static copy of the presentation. Showoff is a bit challenging to get actually working ATM so you might just want to make do with this.
+
+To try the show off route:
+
+    git clone https://github.com/robie1373/RWRT
+    cd RWRT/
+    bundle install
+    cd Real_World_Ruby_Tricks/
+    showoff serve
+
+Then just point your browser at http://localhost:9090 If everything worked you will see the preso. 
+If you 
+
+    export SHOWOFFEVALRUBY=1
+
+you might even be able to click on some of the code samples and see the output.
+
+
 <!SLIDE center incremental transition=fade>
 # Real world Ruby tricks.
 
