@@ -1,9 +1,18 @@
 
+body {
+    background-color: #45416B;
+    margin: 0;
+    padding: 0;
+}
+
 .content {
+    height: 100%;
+    width: 100%;
     color: black;
     font-family: helvetica, arial;
-    backgroud-color: #229;
+    background-color: #d2691e;
 }
+
 h1, h2 {
     color: rgb(79, 180, 226);
     font-family: Georgia;

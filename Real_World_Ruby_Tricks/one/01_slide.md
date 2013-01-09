@@ -1,14 +1,11 @@
-export SHOWOFF_EVAL_RUBY=1
-
-<!SLIDE bullets incremental transition=fade>
+<!SLIDE center incremental transition=fade>
 # Real world Ruby tricks.
 
 *No plan survives engagement with the enemy and no script survives engagement with the environment. I'll show a couple of Ruby-isms that I've found make my scripts more robust, safer, or more useful in messy situations.*
 
 <!SLIDE code incremental small transition=fade>
 ## File.open() {}
-What I always used to do:
-
+###What I always used to do:
     @@@ ruby
     Dir.chdir '/tmp'
     2.times do
@@ -16,9 +13,7 @@ What I always used to do:
         file.write "drat"
         # file.close (I always forget this part)
     end
-
-Yields:
-
+###Yields:
     @@@
     $ lsof /tmp/File.txt
     COMMAND   PID      USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
@@ -27,7 +22,7 @@ Yields:
 
 <!SLIDE code small execute incremental transition=fade>
 ## File.open() {}
-What I do now:
+###What I do now:
 
     @@@ ruby
     Dir.chdir '/tmp'
@@ -42,7 +37,7 @@ What I do now:
 
 <!SLIDE code execute transition=fade>
 ## Tempfile library
-Scenario - Respecting your users' ~ directory
+###Scenario - Respecting your users' ~ directory
 
     @@@ ruby
     require 'tempfile'
@@ -52,7 +47,7 @@ Scenario - Respecting your users' ~ directory
 
 <!SLIDE code execute small transition=fade>
 ## Tempfile library 
-Scenario - Download data from Internet for future use
+###Scenario - Download data from Internet for future use
 
     @@@ ruby
     def get_all_the_twitters
@@ -67,7 +62,7 @@ Scenario - Download data from Internet for future use
 
 <!SLIDE code execute small incremental transition=fade>
 ## SHA and/or MD5 hashing
- Scenario - Webserver file integrity
+###Scenario - Webserver file integrity
 
     @@@ ruby
     require 'digest/md5'
@@ -79,7 +74,7 @@ Scenario - Download data from Internet for future use
 
 <!SLIDE code small transition=fade>
 ## SHA and/or MD5 hashing
-Scenario - Crummy links
+###Scenario - Crummy links
 
     @@@ ruby
     data_from_Pottsylvania = ["2GB file", "md5sum"]
@@ -93,8 +88,7 @@ Scenario - Crummy links
 
 <!SLIDE code incremental transition=fade>
 ## Begin, Rescue, Ensure, End
-Scenario - Exercise hardware infinitely
-
+###Scenario - Exercise hardware infinitely
 Messy
 
     @@@ ruby
@@ -108,8 +102,7 @@ Messy
 
 <!SLIDE code small incremental transition=fade>
 ## Begin, Rescue, Ensure, End
-Scenario - Exercise hardware infinitely
-
+###Scenario - Exercise hardware infinitely
 Neat
 
     @@@ ruby
@@ -130,7 +123,7 @@ Neat
 
 <!SLIDE code small incremental transition=fade>
 ## Begin, Rescue, Ensure, End
-Scenario - Services
+###Scenario - Services
 
     @@@ ruby
     class Logger
@@ -143,8 +136,15 @@ Scenario - Services
       end
     end
 
-<!SLIDE  transition=fade>
-## Thank you
+<!SLIDE center transition=fade>
+Nothing is new anymore. Everything in these slides came from somewhere else. I'm just not smart enough to remember who or where.
+
+Avdi Grimm did a Ruby Tapa on Tempfiles recently which is much better. You should check them out anyway.
+
+The Ruby community is full of excellent people and ideas. Thanks to all.
+
+<!SLIDE center transition=fade>
+## Thanks for listening!
 
 robie1373@gmail.com
 
